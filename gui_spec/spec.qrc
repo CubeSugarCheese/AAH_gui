@@ -1,0 +1,25 @@
+<RCC>
+  <qresource prefix="all">
+    <file>about_icon.ico</file>
+    <file>about_icon.svg</file>
+    <file>akhelper_black_only.ico</file>
+    <file>akhelper_black_only.png</file>
+    <file>akhelper_color.ico</file>
+    <file>akhelper_color.png</file>
+    <file>planning_icon.ico</file>
+    <file>planning_icon.svg</file>
+    <file>settings_icon.ico</file>
+    <file>settings_icon.svg</file>
+  </qresource>
+  <qresource prefix="materal">
+    <file>../material/QListView.qss</file>
+    <file>../material/QProgressBar.qss</file>
+    <file>../material/QPushButton-Flat.qss</file>
+    <file>../material/QPushButton-Raised.qss</file>
+    <file>../material/QRadioButton.qss</file>
+    <file>../material/QSlider.qss</file>
+    <file>../material/QTabBar.qss</file>
+    <file>../material/QTextEdit.qss</file>
+    <file>../material/QToolButton.qss</file>
+  </qresource>
+</RCC>

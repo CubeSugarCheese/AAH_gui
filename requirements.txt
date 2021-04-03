@@ -1,0 +1,11 @@
+PyQt5~=5.15.3
+coloredlogs==15.0
+numpy==1.20.1
+opencv-python==4.5.1.48
+Pillow==8.1.0
+requests==2.25.1
+ruamel.yaml==0.16.12
+colorama==0.4.4; sys_platform == 'win32'
+setuptools~=54.0.0
+certifi~=2020.12.5
+urllib3~=1.26.3
