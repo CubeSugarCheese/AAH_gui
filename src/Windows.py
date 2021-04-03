@@ -1,8 +1,9 @@
 import sys
 import json
+import logging
 
-from PyQt5.QtCore import QThread
-from PyQt5.QtWidgets import QApplication, QMainWindow  # 导入PyQt相关模块
+from PyQt5.QtWidgets import QMainWindow  # 导入PyQt相关模块
+from PyQt5.QtWidgets import QTextBrowser
 
 from windows.Not_implemented import *  # 导入未实现窗口模块
 from windows.about import *  # 导入关于窗口模块
@@ -100,3 +101,15 @@ class NotWindow(Ui_NotImplementedWindow):
     def __init__(self, parent=None):
         super(NotWindow, self).__init__(parent)
         self.setupUi(self)
+
+
+class QTextBrowserLogger(logging.Handler):
+    def __init__(self, parent: QTextBrowser):
+        super().__init__()
+        self.widget = parent
+        self.widget.setReadOnly(True)
+        self.widget.setEnabled(True)
+
+    def emit(self, record):
+        msg = self.format(record)
+        self.widget.append(msg)
