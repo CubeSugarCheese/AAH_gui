@@ -22,7 +22,7 @@ def runMain():
     list=listUiFile()
     for uifile in list:
         pyfile=transPyFile(uifile)
-        cmd='pyrcc5 -o {pyfile} {uifile}'.format(pyfile=pyfile,uifile=uifile) #注意{pyfile} {uifile}之间有空格
+        cmd='pyrcc5 -o {pyfile} {uifile}_rc'.format(pyfile=pyfile,uifile=uifile) #注意{pyfile} {uifile}之间有空格
         os.system(cmd) 
 
 if __name__ == "__main__" :

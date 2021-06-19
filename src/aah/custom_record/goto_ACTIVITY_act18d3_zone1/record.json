@@ -1,0 +1,33 @@
+{
+    "back_to_main": true,
+    "description": "覆潮之下 - 荒败盐风",
+    "prefer_mode": "match_template",
+    "records": [
+        {
+            "img": "step0.png",
+            "point": [
+                1139,
+                186
+            ],
+            "raise_exception": true,
+            "repeat": 1,
+            "threshold": 0.7,
+            "type": "tap",
+            "wait_seconds_after_touch": 3
+        },
+        {
+            "img": "step1.png",
+            "point": [
+                1115,
+                450
+            ],
+            "raise_exception": true,
+            "repeat": 1,
+            "threshold": 0.7,
+            "type": "tap",
+            "wait_seconds_after_touch": 1
+        }
+    ],
+    "screen_height": 720,
+    "screen_width": 1280
+}

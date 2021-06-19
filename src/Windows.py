@@ -1,10 +1,11 @@
-import sys
 import json
 import logging
+import sys
 
 from PyQt5.QtWidgets import QMainWindow  # 导入PyQt相关模块
 from PyQt5.QtWidgets import QTextBrowser
 
+from src.Threading import Thread
 from windows.Not_implemented import *  # 导入未实现窗口模块
 from windows.about import *  # 导入关于窗口模块
 from windows.main_gui import *  # 导入主窗口模块
@@ -18,7 +19,6 @@ def printf(string):
 
 # 为了实现UI设计和操作逻辑分离，创建从窗口py文件中继承的类
 class MainWindow(QMainWindow, Ui_guiMainWindow):
-    from gui_spec import spec
 
     def __init__(self, parent=None):
         super(MainWindow, self).__init__(parent)
@@ -32,8 +32,14 @@ class MainWindow(QMainWindow, Ui_guiMainWindow):
         self.initializationButton.clicked.connect(lambda: self.reload())
         self.startBattleButton.clicked.connect(lambda: self.start_battle())
 
+        self.thread = Thread()
+
+    def printf(self, string):
+        self.textBrowser.append(str(string))  # 文本框逐条添加数据
+        self.textBrowser.moveCursor(MainWindow.textBrowser.textCursor().End)  # 文本框显示到底部
+
     def closeEvent(self, event):  # 覆盖原方法以实现关闭警告
-        reply = QtWidgets.QMessageBox.question(self, 'AAH', '确认退出助手?', QtWidgets.QMessageBox.Yes,
+        reply = QtWidgets.QMessageBox.question(self, 'aah', '确认退出助手?', QtWidgets.QMessageBox.Yes,
                                                QtWidgets.QMessageBox.No)
         if reply == QtWidgets.QMessageBox.Yes:
             event.accept()  # 关闭窗口
@@ -42,16 +48,14 @@ class MainWindow(QMainWindow, Ui_guiMainWindow):
 
     def start_battle(self):
         stage = self.stage.text()
-        battle_time = self.battleTime.text()
-        t = BattleThread(stage, battle_time)
-        t.start()
+        battle_time = int(self.battleTime.text())
+        self.thread.ak_helper.module_battle(stage, battle_time)
 
     def load(self):
-        pass
+        self.__init__()
 
     def reload(self):
         self.load()
-        pass
 
     def closeEvent(self, event):
         # 重写该方法主要是解决打开子窗口时，如果关闭了主窗口但子窗口仍显示的问题，使用sys.exit(0) 时就会只要关闭了主窗口，所有关联的子窗口也会全部关闭

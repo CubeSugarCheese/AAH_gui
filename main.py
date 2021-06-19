@@ -1,9 +1,8 @@
+import sys
 
+from PyQt5.QtWidgets import QApplication
 
-from src.Windows import *
-
-# class LoadThread(QThread):
-#    def __init__(self):
+from src.Windows import MainWindow
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

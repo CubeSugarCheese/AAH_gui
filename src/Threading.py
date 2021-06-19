@@ -1,20 +1,31 @@
 from PyQt5.QtCore import QThread
+import json
 
-from src.Windows import MainWindow
+from src.aah.Arknights.helper import ArknightsHelper
 
 
-class BattleThread(QThread, helper.ArknightsHelper):
-    def __init__(self, stage, battle_time):
-        super(BattleThread, self).__init__()
-        self.stage = stage
-        self.battle_time = battle_time
+class Thread(QThread):
+    refill_ap_with_item: bool
+    refill_ap_with_origin: bool
+    reporter_id: int
+    adb_host: str
+    account: str
+    password: str
 
-    def __del__(self):
-        # 线程状态改变与线程终止
-        self.working = False
-        self.wait()
+    def __init__(self):
+        super().__init__()
+        self.load_config()
+        self.ak_helper = ArknightsHelper(adb_host=self.adb_host)
 
-    def run(self) -> None:
-        MainWindow.printf(string="开始作战")
-        self.module_battle(c_id=self.stage, set_count=self.battle_time)
-        MainWindow.printf(string="作战结束")
+    def load_config(self):
+        with open("./src/config.json", "r") as r:
+            config: dict = json.load(r)
+            self.refill_ap_with_item: bool = config["refill_ap_with_item"]
+            self.refill_ap_with_origin: bool = config["refill_ap_with_origin"]
+            self.reporter_id: int = config["reporter_id"]
+            self.adb_host: str = config["adb_server"]
+            self.account: str = config["account"]
+            self.password: str = config["password"]
+
+    def run(self):
+        pass
