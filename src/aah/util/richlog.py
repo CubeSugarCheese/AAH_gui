@@ -37,7 +37,7 @@ class RichLogger:
 
 @lru_cache(maxsize=None)
 def get_logger(module):
-    import config
+    import src.aah.config as config
     if config.get_instance_id() == 0:
         filename = '%s.html' % module
     else:

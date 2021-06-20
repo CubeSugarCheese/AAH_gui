@@ -5,7 +5,7 @@ import cv2
 import numpy as np
 from PIL import Image
 
-from util.richlog import get_logger
+from src.aah.util.richlog import get_logger
 from . import imgops
 from . import item
 from . import minireco

@@ -4,7 +4,7 @@ from . import item, imgops, util
 from PIL import Image
 from . import resources, common
 import json
-from util.richlog import get_logger
+from src.aah.util.richlog import get_logger
 
 logger = get_logger(__name__)
 

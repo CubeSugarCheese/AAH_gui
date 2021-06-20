@@ -141,6 +141,9 @@ class ArknightsHelper(object):
                 "am start -n {}/{}".format(config.ArkNights_PACKAGE_NAME, config.ArkNights_ACTIVITY_NAME))
             logger.debug("成功启动游戏")
 
+    def close_game(self):
+        self.adb.run_device_cmd(f"am force-stop {config.ArkNights_PACKAGE_NAME}")
+
     def __wait(self, n=10,  # 等待时间中值
                MANLIKE_FLAG=True, allow_skip=False):  # 是否在此基础上设偏移量
         if MANLIKE_FLAG:

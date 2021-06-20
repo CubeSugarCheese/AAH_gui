@@ -4,8 +4,8 @@ import numpy as np
 from . import resources
 import zipfile
 from . import common
-from util.richlog import get_logger
-import config
+from src.aah.util.richlog import get_logger
+import src.aah.config as config
 
 
 idx2id = ['-', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',

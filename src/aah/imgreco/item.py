@@ -6,7 +6,7 @@ import numpy as np
 # from skimage.measure import compare_mse
 from PIL import Image
 
-from util.richlog import get_logger
+from src.aah.util.richlog import get_logger
 from . import imgops
 from . import minireco
 from . import resources

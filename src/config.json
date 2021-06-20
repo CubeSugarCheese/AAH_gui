@@ -1,1 +1,1 @@
-{"refill_ap_with_item": true, "refill_ap_with_origin": true, "penguin_report": true, "reporter_id": 12313, "adb_server": "127.0.0.1:21503", "account": "12345678910", "password": "abc123123"}
+{"refill_ap_with_item": true, "refill_ap_with_origin": false, "adb_server": "127.0.0.1:21503"}

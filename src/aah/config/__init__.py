@@ -14,7 +14,7 @@ yaml = ruamel.yaml.YAML()
 bundled = getattr(sys, 'frozen', False) and hasattr(sys, '_MEIPASS')
 if bundled:
     root = sys._MEIPASS
-    CONFIG_PATH = os.path.join(root, 'config')
+    CONFIG_PATH = os.path.join(root, 'aah', 'config')
 else:
     CONFIG_PATH = os.path.realpath(os.path.dirname(__file__))
     root = os.path.realpath(os.path.join(CONFIG_PATH, '..'))

@@ -13,7 +13,7 @@
     <x>0</x>
     <y>0</y>
     <width>422</width>
-    <height>604</height>
+    <height>515</height>
    </rect>
   </property>
   <property name="font">
@@ -80,7 +80,7 @@ QTabBar:close-button {
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>440</y>
+      <y>350</y>
       <width>381</width>
       <height>121</height>
      </rect>
@@ -97,7 +97,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>400</y>
+      <y>310</y>
       <width>101</width>
       <height>31</height>
      </rect>
@@ -130,7 +130,7 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>280</x>
-      <y>400</y>
+      <y>310</y>
       <width>101</width>
       <height>31</height>
      </rect>
@@ -182,7 +182,7 @@ p, li { white-space: pre-wrap; }
       <string>退出游戏</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="autoLoginButton">
+    <widget class="QPushButton" name="openGameButton">
      <property name="geometry">
       <rect>
        <x>140</x>
@@ -198,7 +198,7 @@ p, li { white-space: pre-wrap; }
       </font>
      </property>
      <property name="text">
-      <string>打开并登陆游戏</string>
+      <string>打开游戏</string>
      </property>
     </widget>
     <widget class="QPushButton" name="initializationButton">
@@ -227,7 +227,7 @@ p, li { white-space: pre-wrap; }
       <x>20</x>
       <y>120</y>
       <width>381</width>
-      <height>261</height>
+      <height>181</height>
      </rect>
     </property>
     <property name="font">
@@ -239,41 +239,11 @@ p, li { white-space: pre-wrap; }
     <property name="title">
      <string>战斗模块</string>
     </property>
-    <widget class="QLabel" name="label_3">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>30</y>
-       <width>71</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>微软雅黑</family>
-       <pointsize>9</pointsize>
-       <stylestrategy>PreferDefault</stylestrategy>
-      </font>
-     </property>
-     <property name="text">
-      <string>任务列表：</string>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="comboBox">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>50</y>
-       <width>221</width>
-       <height>31</height>
-      </rect>
-     </property>
-    </widget>
     <widget class="QLabel" name="label_5">
      <property name="geometry">
       <rect>
        <x>130</x>
-       <y>120</y>
+       <y>50</y>
        <width>71</width>
        <height>16</height>
       </rect>
@@ -293,7 +263,7 @@ p, li { white-space: pre-wrap; }
      <property name="geometry">
       <rect>
        <x>260</x>
-       <y>140</y>
+       <y>70</y>
        <width>101</width>
        <height>31</height>
       </rect>
@@ -312,7 +282,7 @@ p, li { white-space: pre-wrap; }
      <property name="geometry">
       <rect>
        <x>140</x>
-       <y>210</y>
+       <y>140</y>
        <width>221</width>
        <height>31</height>
       </rect>
@@ -334,7 +304,7 @@ p, li { white-space: pre-wrap; }
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>190</y>
+       <y>120</y>
        <width>71</width>
        <height>16</height>
       </rect>
@@ -354,7 +324,7 @@ p, li { white-space: pre-wrap; }
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>120</y>
+       <y>50</y>
        <width>71</width>
        <height>16</height>
       </rect>
@@ -370,30 +340,11 @@ p, li { white-space: pre-wrap; }
       <string>关卡：</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="startTaskButton">
-     <property name="geometry">
-      <rect>
-       <x>260</x>
-       <y>50</y>
-       <width>101</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>微软雅黑</family>
-       <pointsize>8</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>开始任务</string>
-     </property>
-    </widget>
     <widget class="QLabel" name="label_6">
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>90</y>
+       <y>20</y>
        <width>101</width>
        <height>31</height>
       </rect>
@@ -426,7 +377,7 @@ p, li { white-space: pre-wrap; }
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>140</y>
+       <y>70</y>
        <width>101</width>
        <height>31</height>
       </rect>
@@ -481,7 +432,7 @@ QLineEdit:pressed {
      <property name="geometry">
       <rect>
        <x>140</x>
-       <y>140</y>
+       <y>70</y>
        <width>101</width>
        <height>31</height>
       </rect>
@@ -536,7 +487,7 @@ QLineEdit:pressed {
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>210</y>
+       <y>140</y>
        <width>101</width>
        <height>31</height>
       </rect>
@@ -592,7 +543,7 @@ QLineEdit:pressed {
     <property name="geometry">
      <rect>
       <x>160</x>
-      <y>400</y>
+      <y>310</y>
       <width>101</width>
       <height>31</height>
      </rect>
