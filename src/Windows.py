@@ -23,16 +23,16 @@ class MainWindow(Ui_guiMainWindow, QMainWindow):
         self.notWindow = NotWindow()
 
         self.setFixedSize(self.width(), self.height())  # 禁止调整窗口大小和窗口最大化
-        self.settings.triggered.connect(lambda: self.settingsWindow.show())  # 绑定打开settings窗口
-        self.about.triggered.connect(lambda: self.settingsWindow.show())  # 绑定打开About窗口
-        self.taskPlanning.triggered.connect(lambda: self.notWindow.show())  # 绑定打开[未实现]窗口
-        self.clearButton.clicked.connect(lambda: self.textBrowser.clear())  # 绑定清空记录
-        self.initializationButton.clicked.connect(lambda: self.reload())
-        self.startBattleButton.clicked.connect(lambda: self.start_battle())
-        self.quickStartBattleButton.clicked.connect(lambda: self.start_battle_slim())
-        self.stopButton.clicked.connect(lambda: self.stop_thread())
-        self.openGameButton.clicked.connect(lambda: self.open_game())
-        self.closeGameButton.clicked.connect(lambda: self.close_game())
+        self.settings.triggered.connect(self.settingsWindow.show)  # 绑定打开settings窗口
+        self.about.triggered.connect(self.aboutWindow.show)  # 绑定打开About窗口
+        self.taskPlanning.triggered.connect(self.notWindow.show)  # 绑定打开[未实现]窗口
+        self.clearButton.clicked.connect(self.textBrowser.clear)  # 绑定清空记录
+        self.initializationButton.clicked.connect(self.reload)
+        self.startBattleButton.clicked.connect(self.start_battle)
+        self.quickStartBattleButton.clicked.connect(self.start_battle_slim)
+        self.stopButton.clicked.connect(self.stop_thread)
+        self.openGameButton.clicked.connect(self.open_game)
+        self.closeGameButton.clicked.connect(self.close_game)
 
     def printf(self, string):
         self.textBrowser.append(str(string))  # 文本框逐条添加数据

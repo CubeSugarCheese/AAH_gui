@@ -22,10 +22,7 @@ class Thread(QThread):
             config: dict = json.load(r)
             self.refill_ap_with_item: bool = config["refill_ap_with_item"]
             self.refill_ap_with_origin: bool = config["refill_ap_with_origin"]
-            self.reporter_id: int = config["reporter_id"]
             self.adb_host: str = config["adb_server"]
-            self.account: str = config["account"]
-            self.password: str = config["password"]
 
     def run(self):
         pass
