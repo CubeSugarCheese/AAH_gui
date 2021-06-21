@@ -24,5 +24,7 @@ class Thread(QThread):
             self.refill_ap_with_origin: bool = config["refill_ap_with_origin"]
             self.adb_host: str = config["adb_server"]
 
+
+
     def run(self):
         pass

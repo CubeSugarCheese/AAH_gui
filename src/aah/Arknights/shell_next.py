@@ -44,7 +44,7 @@ class ShellNextFrontend:
 
 
 def _create_helper(use_status_line=True, show_toggle=False):
-    from Arknights.helper import ArknightsHelper
+    from src.aah.Arknights.helper import ArknightsHelper
     _ensure_device()
     frontend = ShellNextFrontend(use_status_line, show_toggle)
     helper = ArknightsHelper(device_connector=device, frontend=frontend)

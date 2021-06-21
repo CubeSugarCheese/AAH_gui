@@ -289,8 +289,8 @@ class ArknightsHelper(object):
         prepare_reco: dict = None
 
     def operation_once_statemachine(self, c_id):
-        import src.aah.imgreco.before_operation
-        import src.aah.imgreco.end_operation
+        import src.aah.imgreco.before_operation as before_operation
+        import src.aah.imgreco.end_operation as end_operation
 
         smobj = ArknightsHelper.operation_once_state()
         def on_prepare(smobj):

@@ -59,13 +59,17 @@ class MainWindow(Ui_guiMainWindow, QMainWindow):
 
     def start_battle_slim(self):
         if self.already_load:
-            battle_time = int(self.battleTime.text())
+            battle_time = int(self.quickBattleTime.text())
             if battle_time is None:
                 self.printf("输入不合法，请重新输入")
             else:
-                self.thread.ak_helper.module_battle_slim(set_count=battle_time)
+                self.thread.ak_helper.module_battle_slim(c_id=None, set_count=battle_time)
         else:
-            self.printf("未初始化助手，请点击初始化按钮")
+            try:
+                self.printf("未初始化助手，请点击初始化按钮")
+            except RuntimeError:
+                self.printf("初始化失败，请检查模拟器是否启动！")
+                
 
     def open_game(self):
         if self.already_load:
